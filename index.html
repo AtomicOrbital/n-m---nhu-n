@@ -7,13 +7,19 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="number" id="year">
+    <button type="button" onclick="checkLeapYear()">Check</button>
+    <span id="result"></span>
     <script>
-        let year = prompt("Enter the year");
+        function checkLeapYear(){
+            let year = Number(document.getElementById("year").value);
         if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-            alert(year + " is a leap year");
-        } else {
-            alert(year + " is not a leap year" );
+            document.getElementById("result").innerHTML = year + " is leap year";
+        } else{
+            document.getElementById("result").innerHTML = year + " is not leap year";
         }
+    }
     </script>
 </body>
 </html>
+
